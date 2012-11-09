@@ -19,7 +19,6 @@ endif
 
 syn case ignore
 
-syn match todoComment	/^\t*#.*$/ contains=todoContext
 syn match todoProject	/^-\s\+\(\s\+@[^ \t(]\+\(([^)]*)\)\?\)$/ contains=todoContext
 syn match todoProject	/^-\s\+.*$/
 syn match todoProject	/^\+.*$/
@@ -33,6 +32,8 @@ syn match todoTime	/\[.*\]/
 syn match todoDone	/^.*\s@done\(\(\s\|([^)]*)\).*\)\?$/
 syn match todoCancelled	/^.*\s@cancelled\(\(\s\|([^)]*)\).*\)\?$/
 syn match todoTODO	/^\t\+-.*:/
+syn match todoComment	/^\t*#.*$/
+syn match todoTicked	/^\tx.*$/
 
 syn sync fromstart
 
@@ -46,10 +47,9 @@ HiLink todoTime		Delimiter
 HiLink todoProject	Title
 HiLink todoDone		NonText
 HiLink todoCancelled	NonText
-HiLink todoComment	Comment
 HiLink todoTodo		Keyword
-
-call todo#tag_style_dict(g:task_paper_styles)
+HiLink todoComment	SpecialComment
+HiLink todoTicked	Delimiter
 
 let b:current_syntax = "todo"
 
