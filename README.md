@@ -23,6 +23,7 @@ Syntax
 		- Sub item 4d with all types of deadlines @1/1/2030 S@1/1/2030 H@1/1/2030
 		! Urgent item
 		x Item marked as done
+		? Question item
 	- Morning meeting
 		- Email Joan about project @email [10am]
 		# Comment

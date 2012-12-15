@@ -33,6 +33,7 @@ syn match todoDone	/^.*\s@done\(\(\s\|([^)]*)\).*\)\?$/
 syn match todoCancelled	/^.*\s@cancelled\(\(\s\|([^)]*)\).*\)\?$/
 syn match todoTODO	/^\t\+-.*:/
 syn match todoComment	/^\t*#.*$/
+syn match todoQuestion	/^\t*?.*$/
 syn match todoTicked	/^\tx.*$/
 
 syn sync fromstart
@@ -48,6 +49,7 @@ HiLink todoProject	Title
 HiLink todoDone		NonText
 HiLink todoCancelled	NonText
 HiLink todoTodo		Keyword
+HiLink todoQuestion	Comment
 HiLink todoComment	SpecialComment
 HiLink todoTicked	Delimiter
 
