@@ -16,14 +16,14 @@ syn case ignore
 
 syn match todoProject	/^-\s\+\(\s\+@[^ \t(]\+\(([^)]*)\)\?\)$/ contains=todoContext
 syn match todoProject	/^-\s\+.*$/
-syn match todoProject	/^[a-zA-Z0-9 \-]\+$/
+syn match todoProject	/^[a-zA-Z0-9 \-()]\+$/ contains=todoTicked
 syn match todoItem	/^\t\+-/
 syn match todoItem	/^\t\+\*/
 syn match todoItemUrg	/^\t\+!.*$/
 syn match todoTODO	/^\t\+-.*:/
 syn match todoComment	/^\t*#.*$/
 syn match todoQuestion	/^\t*?.*$/
-syn match todoTicked	/^\tx.*$/
+syn match todoTicked	/\tx.*/
 syn match todoContext	/\s\zs@[^ \t(]\+\(([^)]*)\)\?/
 syn match todoContextH	/\s\zsH@[^ \t(]\+\(([^)]*)\)\?/
 syn match todoContextS	/\s\zsS@[^ \t(]\+\(([^)]*)\)\?/
