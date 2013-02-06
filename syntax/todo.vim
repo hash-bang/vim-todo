@@ -12,29 +12,24 @@ else
   command! -nargs=+ HiLink hi def link <args>
 endif
 
-" Define tag styles
-if !exists('g:task_paper_styles')
-    let g:task_paper_styles = {'FAIL': 'guibg=Red guifg=White'}
-endif
-
 syn case ignore
 
 syn match todoProject	/^-\s\+\(\s\+@[^ \t(]\+\(([^)]*)\)\?\)$/ contains=todoContext
 syn match todoProject	/^-\s\+.*$/
-syn match todoProject	/^\+.*$/
+syn match todoProject	/^[a-zA-Z0-9 \-]\+$/
 syn match todoItem	/^\t\+-/
 syn match todoItem	/^\t\+\*/
 syn match todoItemUrg	/^\t\+!.*$/
+syn match todoTODO	/^\t\+-.*:/
+syn match todoComment	/^\t*#.*$/
+syn match todoQuestion	/^\t*?.*$/
+syn match todoTicked	/^\tx.*$/
 syn match todoContext	/\s\zs@[^ \t(]\+\(([^)]*)\)\?/
 syn match todoContextH	/\s\zsH@[^ \t(]\+\(([^)]*)\)\?/
 syn match todoContextS	/\s\zsS@[^ \t(]\+\(([^)]*)\)\?/
 syn match todoTime	/\[.*\]/
 syn match todoDone	/^.*\s@done\(\(\s\|([^)]*)\).*\)\?$/
 syn match todoCancelled	/^.*\s@cancelled\(\(\s\|([^)]*)\).*\)\?$/
-syn match todoTODO	/^\t\+-.*:/
-syn match todoComment	/^\t*#.*$/
-syn match todoQuestion	/^\t*?.*$/
-syn match todoTicked	/^\tx.*$/
 
 syn sync fromstart
 
