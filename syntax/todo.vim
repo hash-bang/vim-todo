@@ -51,4 +51,9 @@ HiLink todoTicked	Delimiter
 let b:current_syntax = "todo"
 
 delcommand HiLink
+
+" Set the fold method to indent but force all folds to start as open
+set foldmethod=indent
+set foldlevel=20
+
 " vim: ts=8
