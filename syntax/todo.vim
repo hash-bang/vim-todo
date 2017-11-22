@@ -36,7 +36,7 @@ syn sync fromstart
 
 "highlighting for todo groups
 HiLink todoItem		Identifier
-HiLink todoItemUrg	Debug
+HiLink todoItemUrg	Exception
 HiLink todoContext	Special
 HiLink todoContextS	Special
 HiLink todoContextH	SpecialChar
