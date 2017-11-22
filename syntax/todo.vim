@@ -28,7 +28,7 @@ syn match todoTicked	/\tx.*/
 syn match todoContext	/\s\zs@[^ \t(]\+\(([^)]*)\)\?/
 syn match todoContextH	/\s\zsH@[^ \t(]\+\(([^)]*)\)\?/
 syn match todoContextS	/\s\zsS@[^ \t(]\+\(([^)]*)\)\?/
-syn match todoTime	/\[.*\]/
+syn match todoTime	/\[.\{-}\]/
 syn match todoDone	/^.*\s@done\(\(\s\|([^)]*)\).*\)\?$/
 syn match todoCancelled	/^.*\s@cancelled\(\(\s\|([^)]*)\).*\)\?$/
 
