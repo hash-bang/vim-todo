@@ -25,6 +25,7 @@ syn match todoTODO	/^\t\+-.\{-}:\s+/
 syn match todoComment	/^\t*#.*$/
 syn match todoQuestion	/^\t*?.*$/
 syn match todoTicked	/\tx.*/
+syn match todoCode	/`.\{-}`/
 syn match todoContext	/\s\zs@[^ \t(]\+\(([^)]*)\)\?/
 syn match todoContextH	/\s\zsH@[^ \t(]\+\(([^)]*)\)\?/
 syn match todoContextS	/\s\zsS@[^ \t(]\+\(([^)]*)\)\?/
@@ -37,6 +38,7 @@ syn sync fromstart
 "highlighting for todo groups
 HiLink todoItem		Identifier
 HiLink todoItemUrg	Exception
+HiLink todoCode		String
 HiLink todoContext	Special
 HiLink todoContextS	Special
 HiLink todoContextH	SpecialChar
