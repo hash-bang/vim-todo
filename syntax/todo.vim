@@ -21,7 +21,7 @@ syn match todoItem	/^\t\+-/
 syn match todoItem	/^\t\+\*/
 syn match todoItemUrg	/^\t\+!.*$/
 syn match todoItemUrg	/FIXME/
-syn match todoTODO	/^\t\+-.\{-}:/
+syn match todoTODO	/^\t\+-.\{-}:\s+/
 syn match todoComment	/^\t*#.*$/
 syn match todoQuestion	/^\t*?.*$/
 syn match todoTicked	/\tx.*/
