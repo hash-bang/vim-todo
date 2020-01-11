@@ -42,7 +42,7 @@ HiLink todoCode		String
 HiLink todoContext	Special
 HiLink todoContextS	Special
 HiLink todoContextH	SpecialChar
-HiLink todoTime		Delimiter
+HiLink todoTime		String
 HiLink todoProject	Title
 HiLink todoDone		NonText
 HiLink todoCancelled	NonText
