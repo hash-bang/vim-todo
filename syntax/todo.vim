@@ -49,7 +49,7 @@ HiLink todoCancelled	NonText
 HiLink todoTodo		Keyword
 HiLink todoQuestion	Comment
 HiLink todoComment	SpecialComment
-HiLink todoTicked	NonText
+HiLink todoTicked	Comment
 
 let b:current_syntax = "todo"
 
