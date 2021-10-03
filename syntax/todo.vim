@@ -21,6 +21,7 @@ syn match todoItem	/^\t\+-/
 syn match todoItem	/^\t\+\*/
 syn match todoItemUrg	/^\t\+!.*$/
 syn match todoItemUrg	/FIXME/
+syn match todoItemUrg	/https\?:\/\/\(\w\+\(:\w\+\)\?@\)\?\([A-Za-z][-_0-9A-Za-z]*\.\)\{1,}\(\w\{2,}\.\?\)\{1,}\(:[0-9]\{1,5}\)\?\S*/
 syn match todoTODO	/^\t\+-.\{-}:\s+/
 syn match todoComment	/^\t*#.*$/
 syn match todoQuestion	/^\t*?.*$/
