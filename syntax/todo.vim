@@ -20,8 +20,9 @@ syn match todoProject	/^[a-zA-Z0-9 \-()]\+$/ contains=todoTicked
 syn match todoItem	/^\t\+-/
 syn match todoItem	/^\t\+\*/
 syn match todoItemUrg	/^\t\+!.*$/
+syn match todoItemLow	/^\t\+v.*$/
 syn match todoItemUrg	/FIXME/
-syn match todoItemUrg	/https\?:\/\/\(\w\+\(:\w\+\)\?@\)\?\([A-Za-z][-_0-9A-Za-z]*\.\)\{1,}\(\w\{2,}\.\?\)\{1,}\(:[0-9]\{1,5}\)\?\S*/
+syn match todoItemUrl	/https\?:\/\/\(\w\+\(:\w\+\)\?@\)\?\([A-Za-z][-_0-9A-Za-z]*\.\)\{1,}\(\w\{2,}\.\?\)\{1,}\(:[0-9]\{1,5}\)\?\S*/
 syn match todoTODO	/^\t\+-.\{-}:\s+/
 syn match todoComment	/^\t*#.*$/
 syn match todoQuestion	/^\t*?.*$/
@@ -38,18 +39,20 @@ syn sync fromstart
 
 "highlighting for todo groups
 HiLink todoItem		Identifier
-HiLink todoItemUrg	Exception
+HiLink todoItemUrg	ErrorMsg
+HiLink todoItemLow	Comment
+HiLink todoItemUrl	Identifier
 HiLink todoCode		String
 HiLink todoContext	Special
 HiLink todoContextS	Special
 HiLink todoContextH	SpecialChar
 HiLink todoTime		String
-HiLink todoProject	Title
+HiLink todoProject	StatusLine
 HiLink todoDone		NonText
 HiLink todoCancelled	NonText
 HiLink todoTodo		Keyword
 HiLink todoQuestion	Comment
-HiLink todoComment	SpecialComment
+HiLink todoComment	Todo
 HiLink todoTicked	Comment
 
 let b:current_syntax = "todo"
