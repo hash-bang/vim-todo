@@ -23,8 +23,8 @@ syn match todoItemUrg	/^\t\+!.*$/
 syn match todoItemLow	/^\t\+v.*$/
 syn match todoItemUrg	/FIXME/
 syn match todoItemUrl	/https\?:\/\/\(\w\+\(:\w\+\)\?@\)\?\([A-Za-z][-_0-9A-Za-z]*\.\)\{1,}\(\w\{2,}\.\?\)\{1,}\(:[0-9]\{1,5}\)\?\S*/
-syn match todoTODO	/^\t\+-.\{-}:\s+/
-syn match todoComment	/^\t*#.*$/
+syn match todoTODO	/^\t\+-.\{-}:/
+syn match todoComment	/\(^\t*\)\@<=#.*$/
 syn match todoQuestion	/^\t*?.*$/
 syn match todoTicked	/\tx.*/
 syn match todoCode	/`.\{-}`/
